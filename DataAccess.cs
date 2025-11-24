@@ -43,7 +43,7 @@ namespace AdoNet
             {
                 Console.WriteLine("Insert category name");
                 categotyName = Console.ReadLine();
-                string query = "INSER INTO Category([CategoryName])" + "VALEUS (@CategoryName)";
+                string query = "INSERT INTO Category([CategoryName])" + "VALUES (@CategoryName)";
                 using (SqlConnection cn = new SqlConnection(connectionString))
                 using (SqlCommand cmd = new SqlCommand(query, cn))
                 {
@@ -83,8 +83,8 @@ namespace AdoNet
                 price = Console.ReadLine();
                 Console.WriteLine("Insert image url");
                 image = Console.ReadLine();
-                string query = "INSER INTO Category([CategoryID],[ProductName],[ProdDescription],[Price],[ImagePath])" +
-                                "VALEUS (@CategoryID,@ProductName,@ProdDescription,@Price,@ImagePath)";
+                string query = "INSERT INTO Category([CategoryID],[ProductName],[ProdDescription],[Price],[ImagePath])" +
+                                "VALUES (@CategoryID,@ProductName,@ProdDescription,@Price,@ImagePath)";
                 using (SqlConnection cn = new SqlConnection(connectionString))
                 using (SqlCommand cmd = new SqlCommand(query, cn))
                 {
